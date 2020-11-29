@@ -1,9 +1,9 @@
-package com.example.swooshapp
+package com.example.swooshapp.Controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.swooshapp.R
 
 
 class WelcomeActivity : BaseActivity() {

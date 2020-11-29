@@ -1,8 +1,8 @@
-package com.example.swooshapp
+package com.example.swooshapp.Controller
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 
 open class BaseActivity : AppCompatActivity() {
 
