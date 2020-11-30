@@ -18,6 +18,11 @@ class LeagueActivity : BaseActivity() {
         private lateinit var coedLeagueBtn: ToggleButton
         private lateinit var mensLeagueBtn: ToggleButton*/
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_PLAYER, player)
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +30,13 @@ class LeagueActivity : BaseActivity() {
         /*womensLeagueBtn = findViewById(R.id.womensLeagueBtn)
         coedLeagueBtn =  findViewById(R.id.coedLeagueBtn)
         mensLeagueBtn =  findViewById(R.id.mensLeagueBtn)*/
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState != null) {
+            player = savedInstanceState.getParcelable<Player>(EXTRA_PLAYER)!!
+        }
     }
 
     fun onMensClicked(view: View) {
